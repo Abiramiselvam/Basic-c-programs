@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,a,power;
+    scanf("%d %d",&n,&a);
+    power=pow(n,a);
+    printf("%d",power);   
+}
