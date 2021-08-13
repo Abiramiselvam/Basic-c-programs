@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,temp=0;
+    scanf("%d %d",&a,&b);
+    printf("before swapping a is %d b is %d",a,b);
+    temp=a;
+    a=b;
+    b=temp;
+    printf("\nafter swapping a is %d b is %d",a,b);
+}
