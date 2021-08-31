@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[90],start,end,i,j,temp=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d %d",&start,&end);
+    for(i=1;i<=n;i++)
+    {
+        for(j=i;j<=n;j++)
+        {
+            if(i>start ||  i>=end)
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    
+}
