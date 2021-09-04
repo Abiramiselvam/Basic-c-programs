@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<math.h>
+int findams(int n,int sum)
+{
+    int rem1,sum1=0,temp1;
+    temp1=n;
+    if(sum==temp1)
+    {
+        while(temp1)
+        {
+            rem1=temp1%10;
+            if(rem1%2==0)
+            {
+                sum1=sum1+rem1;
+            }
+            temp1=temp1/10;
+        }
+    }
+    else
+    {
+        while(temp1)
+        {
+            rem1=temp1%10;
+            if(rem1%2!=0)
+            {
+                sum1=sum1+rem1;
+            }
+            temp1=temp1/10;
+        }
+    }
+    printf("%d",sum1);
+    
+    
+}
+void amstrong(int n,int c)
+{
+    int sum=0,dig,power,t;
+    t=n;
+    while(t!=0)
+    {
+        dig=t%10;
+        power=pow(dig,c);
+        sum=sum+power;
+        t=t/10;
+    }
+    findams(n,sum);
+}
+
+void main()
+{
+    int n,temp,r,c=0;
+    scanf("%d",&n);
+    temp=n;
+    while(temp)
+    {
+        r=temp%10;
+        c=c+1;
+        temp=temp/10;
+    }
+    amstrong(n,c);
+}
