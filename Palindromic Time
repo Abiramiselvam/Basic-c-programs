@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int hr,min,r,rev=0,min2,ans;
+    scanf("%d:%d",&hr,&min);
+    while(hr)
+    {
+        rev=rev*10+hr%10;
+        hr=hr/10;
+    }
+    
+    if(rev<=9)
+    {
+        ans=rev*10-min;
+        {
+            if(ans<0)
+            {
+                printf("%d",60-ans);
+            }
+            else
+            {
+                printf("%d",ans);
+            }
+        }
+    }
+    else
+    {
+        printf("%d",rev-min);
+    }
+    
+}
